@@ -138,4 +138,4 @@ function ccOpts(sel){return CC.map(function(c){return '<option value="'+c[1]+'"'
 function fullNum(cc,v){v=String(v).replace(/\D/g,'').replace(/^0+/,'');if(v.indexOf(cc)===0&&v.length>cc.length+7)v=v.slice(cc.length);if(cc==='62'&&!/^8\d{8,11}$/.test(v))return '';var r=cc+v;return /^\d{6,13}$/.test(v)&&r.length>=8&&r.length<=16?r:''}
 function modal(h){$('mc').innerHTML=h;$('m').classList.add('on')}
 function closeM(){$('m').classList.remove('on')}
-function shrink(f,max,sq,cb){var r=new FileReader();r.onload=function(){var i=new Image();i.onload=function(){var c=document.createElement('canvas'),k=Math.min(1,max/Math.max(i.width,i.height));if(sq){c.width=c.height=max;var s=Math.min(i.width,i.height);c.getContext('2d').drawImage(i,(i.width-s)/2,(i.height-s)/2,s,s,0,0,max,max)}else{c.width=Math.round(i.width*k);
+function shrink(f,max,sq,cb){var r=new FileReader();r.onload=function(){var i=new Image();i.onload=function(){var c=document.createElement('canvas'),k=Math.min(1,max/Math.max(i.width,
